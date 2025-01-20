@@ -45,11 +45,12 @@ document.getElementById('loadJsonButton').addEventListener('click', () => {
 
 // フォームにデータを反映する関数
 function populateForm(data) {
-  document.getElementById('title').value = data.title || '';
+  document.getElementById('name').value = data.name || '';
   document.getElementById('description').value = data.description || '';
   document.getElementById('id').value = data.id || '';
-  document.getElementById('history-type').value = data.type || '';
-  document.getElementById('eventDate').value = data.date || '';
+  document.getElementById('foundedDate').value = data.foundedDate || '';
+  document.getElementById('activities').value = data.activities || '';
+  document.getElementById('headquarters').value = data.headquarters || '';
 }
 
 // JSONをコピーする機能
