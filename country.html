@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JSON作成ツール</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header>
+    <h1>国家情報JSON作成ツール</h1>
+  </header>
+  <main>
+    <form id="jsonForm">
+      <h2>基本情報</h2>
+      <label>
+        国家名:
+        <input type="text" id="name" required>
+      </label>
+      <label>
+        場所の説明:
+        <input type="text" id="location" required>
+      </label>
+      <label>
+        建国日:
+        <input type="date" id="foundedDate" required>
+      </label>
+      <label>
+        統治形態:
+        <input type="text" id="governmentType" required>
+      </label>
+      <label>
+        国の説明や紹介文:
+        <textarea id="features" required></textarea>
+      </label>
+
+      <h2>座標</h2>
+      <label>
+        <br>X:<br>
+        <input type="number" id="coordX" required>
+      </label>
+      <label>
+        Y:<br>
+        <input type="number" id="coordY" required>
+      </label>
+      <label>
+        Z:<br>
+        <input type="number" id="coordZ" required>
+      </label>
+
+      <h2>歴史イベント</h2>
+      <div id="historyContainer">
+        <button type="button" id="addHistory">+ イベント追加</button>
+      </div>
+
+      <h2>ランドマーク</h2>
+      <div id="landmarksContainer">
+        <button type="button" id="addLandmark">+ ランドマーク追加</button>
+      </div>
+
+      <section>
+        <h2>JSONファイルを読み込む</h2>
+        <input type="file" id="jsonFileInput" accept=".json">
+        <button id="loadJsonButton">読み込む</button>
+      </section>
+
+      <button type="submit">JSONを生成</button>
+    </form>
+
+    <h2>生成されたJSON</h2>
+    <pre id="output"></pre>
+    <button id="copyJsonButton">コピー</button>
+    <button id="downloadJsonButton">ダウンロード</button>
+  </main>
+  <script src="country.js"></script>
+</body>
+
+</html>
