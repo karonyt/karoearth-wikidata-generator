@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JSON作成ツール</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header>
+    <h1>組織JSON作成ツール</h1>
+  </header>
+  <main>
+    <form id="jsonForm">
+      <label>
+        id(適当な英語):
+        <input type="text" id="id" required>
+      </label>
+      <label>
+        組織名:
+        <input type="text" id="name" required>
+      </label>
+
+      <label>
+        本拠地:
+        <textarea id="headquarters" required></textarea>
+      </label>
+
+      <label>
+        活動内容:
+        <textarea id="activities" required></textarea>
+      </label>
+
+      <label>
+        説明文:
+        <textarea id="description" required></textarea>
+      </label>
+
+      <label>
+        設立日:
+        <input type="date" id="foundedDate" required>
+      </label>
+
+      <section>
+        <h2>JSONファイルを読み込む</h2>
+        <input type="file" id="jsonFileInput" accept=".json">
+        <button id="loadJsonButton">読み込む</button>
+      </section>
+
+      <button type="submit">JSONを生成</button>
+    </form>
+
+    <h2>生成されたJSON</h2>
+    <pre id="output"></pre>
+    <button id="copyJsonButton">コピー</button>
+    <button id="downloadJsonButton">ダウンロード</button>
+  </main>
+  <script src="organizations.js"></script>
+</body>
+
+</html>
